@@ -8,9 +8,10 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *head = list, *nextptr = list->next;
+	listint_t *head = list, *nextptr;
 	while(head)
 	{
+		nextptr = head->next;
 		while(nextptr)
 		{
 			if (nextptr == head)
