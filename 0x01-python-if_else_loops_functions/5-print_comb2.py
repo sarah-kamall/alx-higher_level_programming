@@ -2,6 +2,6 @@
 for i in range(0, 10):
     for j in range (0, 10):
         if i != 9 or j != 9:
-            print(f"{i}{j}, ", end = "")
+            print("{:02d}, ".format(i * 10 + j), end = "")
         else:
-            print(f"{i}{j}")
+            print("{:02d}".format(i * 10 + j))
