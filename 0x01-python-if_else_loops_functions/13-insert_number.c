@@ -24,11 +24,13 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	else
 	{
-		*head = malloc(sizeof(listint_t));
-		if (*head)
+		new = malloc(sizeof(listint_t));
+		if (!new)
 			return (NULL);
-		(*head)->n = number;
-		(*head)->next = NULL;
+		new->n = number;
+		new->next = NULL;
+		*head = new;
+		return (new);
 	}
 	return (NULL);
 }
