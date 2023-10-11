@@ -1,4 +1,4 @@
-#!usr/bin/pyhton3
+#!/usr/bin/pyhton3
 def best_score(a_dictionary):
     maxi = -10000
     if a_dictionary is not None:
