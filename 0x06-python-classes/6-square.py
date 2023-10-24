@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 class Square:
     def __init__(self, sizel = 0, pos= (0, 0)):
-        self.__size = None
-        self.__position = None
         self.size = sizel
         self.position = pos
 
