@@ -1,20 +1,22 @@
 #!/usr/bin/python3
 class Square:
-    def __init__(self, sizel = 0):
+    def __init__(self, sizel = 0, pos= (0, 0)):
         self.__size = None
         self.__position = None
         self.size = sizel
+        self.position = pos
 
     @property
     def position(self):
         return self.__position
 
-    @position.setter(self, position):
+    @position.setter
+    def position(self, position):
         if isinstance(position, tuple) or len(position) == 2:
             if isinstance(position[0], int) and isinstance(position[1], int) and position[0] >= 0 and position[1] >= 0:
                 self.__position = position
-        else:
-            raise TypeError("position must be a tuple of 2 positive integers")
+            else:
+                raise TypeError("position must be a tuple of 2 positive integers")
 
     @property
     def size(self):
