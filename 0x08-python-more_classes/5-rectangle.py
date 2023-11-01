@@ -77,4 +77,9 @@ class Rectangle:
         """make a code string to feed to eval to create a new rectangle"""
         stringt = "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
         return stringt
+
+    def __del__(self):
+        """class destructor """
+        print("Bye rectangle...")
+
     pass
