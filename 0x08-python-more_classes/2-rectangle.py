@@ -55,7 +55,7 @@ class Rectangle:
         """function calculating area"""
         return self.width * self.height
 
-    def premiter(self):
+    def perimeter(self):
         """fuction calculating premiter"""
         if self.width == 0 or self.height == 0:
             return 0
