@@ -7,6 +7,7 @@ class Rectangle:
 
     number_of_instances = 0
     print_symbol = "#"
+    
     def checkvalueintw(self, value):
         """check if value is of type int and valid dimention"""
         if not isinstance(value, int):
@@ -98,11 +99,12 @@ class Rectangle:
             return rect_2
         else:
             return rect_1
+    
+    @classmethod
     def square(cls, size=0):
         """Return a new Rectangle with width and height equal to size.
         Args:
             size (int): The width and height of the new Rectangle.
         """
-        rect = Rectangle(size, size)
-        return rect
+        return (cls(size, size))
     pass
