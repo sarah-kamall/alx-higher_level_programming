@@ -51,4 +51,14 @@ class Rectangle:
         if(self.checkvalueinth(value)):
             self.__height = value
 
+    def area(self):
+        """function calculating area"""
+        return self.width * self.height
+
+    def premiter(self):
+        """fuction calculating premiter"""
+        if self.width == 0 or self.height == 0:
+            return 0
+        else:
+            return 2 * (self.width + self.height)
     pass
