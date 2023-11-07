@@ -2,7 +2,7 @@
 """
 my file
 """
-import jsoni
+import json
 
 def to_json_string(my_obj):
     """function to return json string rep"""
