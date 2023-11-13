@@ -100,3 +100,23 @@ class Rectangle(Base):
         """overriding str func"""
         string = "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
         return string
+
+    def update(self, *args):
+        """use args"""
+        a = 0
+        for arg in args:
+            if a == 0:
+                if arg is None:
+                    self.__init__(self.width, self.height, self.x, self.y)
+                self.id = arg
+            elif a == 1:
+                self.width = arg
+            elif a == 2:
+                self.height = arg
+            elif a == 3:
+                self.x = arg
+            elif a == 4:
+                self.y = arg
+            a += 1
+
+
