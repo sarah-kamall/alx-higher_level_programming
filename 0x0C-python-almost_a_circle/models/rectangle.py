@@ -4,7 +4,6 @@ from models.base import Base
 
 class Rectangle(Base):
     """Class Rectangle"""
-    """constructor"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """constructor imp"""
         self.__width = width
@@ -15,6 +14,7 @@ class Rectangle(Base):
     """setters and getters"""
     @property
     def width(self):
+        """return width"""
         return self.__width
     @width.setter
     def width(self,value):
@@ -25,6 +25,7 @@ class Rectangle(Base):
         self.__width = value
     @property
     def height(self):
+        """return height"""
         return self.__height
     @height.setter
     def height(self,value):
@@ -35,6 +36,7 @@ class Rectangle(Base):
         self.__height = value
     @property
     def x(self):
+        """return x"""
         return self.__x;
     @x.setter
     def x(self,value):
@@ -43,6 +45,7 @@ class Rectangle(Base):
         self.__x = value
     @property 
     def y(self):
+        """return y"""
         return self.__y
     @y.setter
     def y(self, value):
