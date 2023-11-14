@@ -135,6 +135,7 @@ class Rectangle(Base):
                 elif k == "y":
                     self.y = v
     def to_dictionary(self):
+        """dit rep of rect"""
         dicti = { "id": self.id, "width" : self.width, 
                 "height" : self.height, "x" : self.x,
                 "y" : self.y}
