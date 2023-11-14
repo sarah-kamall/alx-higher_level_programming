@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 """defines rectangle class"""
 from models.rectangle import Rectangle
@@ -39,12 +40,11 @@ class Square(Rectangle):
                         self.__init__(self.width, self.height, self.x, self.y)
                     self.id = arg
                 elif a == 1:
+                    self.height = arg
                     self.width = arg
                 elif a == 2:
-                    self.height = arg
-                elif a == 3:
                     self.x = arg
-                elif a == 4:
+                elif a == 3:
                     self.y = arg
                 a += 1
         elif kwargs and len(kwargs) != 0:
@@ -54,10 +54,9 @@ class Square(Rectangle):
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = v
-                elif k == "width":
-                    self.width = v
-                elif k == "height":
+                elif k == "size":
                     self.height = v
+                    self.width = v
                 elif k == "x":
                     self.x = v
                 elif k == "y":
