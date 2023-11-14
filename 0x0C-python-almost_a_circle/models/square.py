@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """defines rectangle class"""
 from models.rectangle import Rectangle
@@ -69,4 +68,9 @@ class Square(Rectangle):
     def size(self,value):
         self.width = value
         self.height = value
-
+    
+    def to_dictionary(self):
+        """sq rep dict"""
+        dicti = {"id": self.id, "size": self.size,
+                "x": self.x, "y": self.y}
+        return dicti
