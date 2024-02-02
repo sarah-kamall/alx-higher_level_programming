@@ -1,0 +1,28 @@
+Module Test for ``print_square``
+============================
+Import Module:
+	>>> print_square = __import__('4-print_square').print_square
+
+Basic Test:
+	>>> print_square(3)
+	###
+	###
+	###
+
+Size not integer:
+	>>> print_square("a")
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+Size is less than zero:
+	>>> print_square(-1)
+	Traceback (most recent call last):
+	...
+	ValueError: size must be >= 0
+
+Size is equal zero:
+	>>> print_square(0)
+
+
+
