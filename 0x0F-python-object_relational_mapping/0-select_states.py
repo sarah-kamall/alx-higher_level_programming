@@ -13,7 +13,6 @@ def list_states(username, password, database):
         )
     try:
         if connection:
-            print("Connected to MySQL server")
             myCursor=connection.cursor()
             myCursor.execute("SELECT * FROM states ORDER BY id ASC")
             states=myCursor.fetchall()
