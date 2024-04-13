@@ -10,7 +10,7 @@ if __name__ == "__main__":
         exit()
 
     username, password, database = sys.argv[1:]
-       connection = MySQLdb.connect(
+    connection = MySQLdb.connect(
         host="localhost",
         port=3306,
         user=username,
