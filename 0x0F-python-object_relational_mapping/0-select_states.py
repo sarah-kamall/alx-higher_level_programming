@@ -2,24 +2,33 @@
 import sys
 import MySQLdb
 
-args= sys.argv
-if len(args)< 4:
-    exit()
 
-    
-mysql_username=args[1]
-mysql_password=args[2]
-database_name=args[3]
+def list_states(username, password, database):
 
-# Establishing a connection to the MySQL server
-connection = MySQLdb.connect(
-    host="localhost",
-    port=3306,
-    user=mysql_username,
-    passwd=mysql_password,
-    db=database_name
-    )
-
-if connection:
-    print("Connected to MySQL server")
    
+# Establishing a connection to the MySQL server
+    connection = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=username,
+        passwd=password,
+        db=database
+        )
+    try:
+        if connection:
+            print("Connected to MySQL server")
+            myCursor=connection.cursor()
+            myCursor.execute("SELECT * FROM states ORDER BY id ASC")
+            states=myCursor.fetchall()
+            for state in states:
+                print(state)
+    except:
+        exit()
+if __name__ == "__main__":
+    
+    if len(sys.argv) != 4:
+        exit()
+
+    username, password, database = sys.argv[1:]
+    list_states(username, password, database)
+        
