@@ -19,6 +19,8 @@ def list_states(username, password, database):
             states=myCursor.fetchall()
             for state in states:
                 print(state)
+            myCursor.close()
+            connection.close()
     except:
         exit()
 if __name__ == "__main__":
