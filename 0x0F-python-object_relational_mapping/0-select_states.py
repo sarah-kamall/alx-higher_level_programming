@@ -2,11 +2,8 @@
 import sys
 import MySQLdb
 
-
+"""  lists all states from the database hbtn_0e_0_usa """
 def list_states(username, password, database):
-
-   
-# Establishing a connection to the MySQL server
     connection = MySQLdb.connect(
         host="localhost",
         port=3306,
