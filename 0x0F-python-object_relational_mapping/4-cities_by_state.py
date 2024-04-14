@@ -8,7 +8,7 @@ if __name__ == "__main__":
     connection = MySQLdb.connect(host="localhost", user=sys.argv[1],
                                  passwd=sys.argv[2], db=sys.argv[3], port=3306)
     cur = connection.cursor()
-    query = ("SELECT c.state_id, s.name, c.name FROM cities AS c "
+    query = ("SELECT c.state_id, c.name, s.name FROM cities AS c "
              ",states AS s "
              "WHERE c.state_id = s.id ORDER BY c.state_id ASC;")
     cur.execute(query)
