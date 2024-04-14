@@ -18,5 +18,6 @@ if __name__ == "__main__":
         print(row[0], end="")
         if i < len(rows) - 1:
             print(", ", end="")
+    print("")
     cur.close()
     connection.close()
