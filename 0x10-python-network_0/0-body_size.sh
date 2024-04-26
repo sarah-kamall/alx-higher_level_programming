@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/bash/
+#comment?
 
 # Check if a URL is provided as an argument
 if [ -z "$1" ]; then
