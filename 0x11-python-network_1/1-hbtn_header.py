@@ -14,8 +14,7 @@ After the code block completes execution, the resources associated with
 the expression are automatically released or closed
 regardless of whether an exception occurs.
 """
-if len(sys.argv) < 2:
-    exit(-1)
+
 url = sys.argv[1]
 with urllib.request.urlopen(url) as response:
     print(response.headers['X-Request-Id'])
