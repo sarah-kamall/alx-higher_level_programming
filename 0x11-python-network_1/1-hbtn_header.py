@@ -10,13 +10,13 @@ while response.headers['key'] returns a key error !
 request = urllib.request.Request(url)
 with urllib.request.urlopen(request) as response:
     print(dict(response.headers).get('X-Request-Id'))
-This approach involves creating a Request object explicitly, 
+This approach involves creating a Request object explicitly,
 allowing you to set additional parameters such as headers, data, etc.,
  if needed, before making the request.
 It provides more flexibility in customizing the request before sending it.
 with urllib.request.urlopen(url) as response:
     print(dict(response.headers).get('X-Request-Id'))
-This approach skips the explicit creation of a Request object 
+This approach skips the explicit creation of a Request object
 and directly opens a connection to the specified URL.
 It's a more concise way to make a simple GET request without
  customizing headers or other request parameters.
